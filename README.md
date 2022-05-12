@@ -29,5 +29,13 @@ Static for unwritable numbers.
 Cache has 2 input 1, and 2 input 2 slots.
 
 # V2 Draft
+32
 ## AC Construction parameters 
-Transformer makes examples with apriory of how to solve. The 
+33
+Transformer makes examples with apriory of how to solve. 
+
+# Computation
+
+110 mil param model: 155.112 min for 1xA100. 0.01873358730628398 $/A100 min. 3$ @ 2.6 hrs for BERT
+
+1 Bil param will yield acceptable results, ~80% nlp. 1410.11 min, 26.416$ @ 23.5 hrs
