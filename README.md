@@ -30,7 +30,7 @@ Cache has 2 input 1, and 2 input 2 slots.
 
 # V2 Draft
 ## AC Construction parameters 
-Transformer makes examples with apriory of how to solve. Still constructs computing system through examples. Examples include input in string to output strings. Information routing graphs, sequence of binary ops, learn program that takes ints and makes an addressing program.
+Transformer makes examples with apriory of how to solve. Still constructs computing system through examples. Examples include input in string to output strings. Information routing graphs, sequence of binary ops, learn program that takes ints and makes an addressing program that can calculate integer pos correctly over many examples with recurrence. Computing systems should be highly parallel (Transformer like) to leverage simplicity of many common tasks.
 
 
 # Optimizer
