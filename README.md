@@ -2,6 +2,7 @@
 **Re**current **A**lgorithm **C**omputing **T**ransformer
 Make Constructive Example -> Compute SAT computer algo -> Use as routing system.
 
+# V1 Draft
 ## AC Construction Parameters
 Transformer attends to various parts to construct parameters needed to build an algorithm.
 This involves making short input examples that test edge cases.
@@ -26,3 +27,7 @@ Each cell can have an int.
 Alongside input tape is cache fixed len mem.
 Static for unwritable numbers.
 Cache has 2 input 1, and 2 input 2 slots.
+
+# V2 Draft
+## AC Construction parameters 
+Transformer makes examples with apriory of how to solve. The 
