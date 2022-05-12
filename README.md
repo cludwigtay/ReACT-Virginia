@@ -29,10 +29,13 @@ Static for unwritable numbers.
 Cache has 2 input 1, and 2 input 2 slots.
 
 # V2 Draft
-32
 ## AC Construction parameters 
-33
-Transformer makes examples with apriory of how to solve. 
+Transformer makes examples with apriory of how to solve. Still constructs computing system through examples. Examples include input in string to output strings. Information routing graphs, sequence of binary ops, learn program that takes ints and makes an addressing program.
+
+
+# Optimizer
+Relate backprop to differentiable SATMax
+
 
 # Computation
 
