@@ -30,7 +30,37 @@ Cache has 2 input 1, and 2 input 2 slots.
 
 # V2 Draft
 ## AC Construction parameters 
-Transformer makes examples with apriory of how to solve. Still constructs computing system through examples. Examples include input in string to output strings. Information routing graphs, sequence of binary ops, learn program that takes ints and makes an addressing program that can calculate integer pos correctly over many examples with recurrence. Computing systems should be highly parallel (Transformer like) to leverage simplicity of many common tasks.
+Transformer makes examples with apriory of how to solve. Still constructs computing system through examples. Examples include input in string to output strings. Information routing graphs, sequence of binary ops, learn program that takes ints and makes an addressing program that can calculate integer pos correctly over many examples with recurrence. ~~Computing systems should be highly parallel (Transformer like) to leverage simplicity of many common tasks~~.
+
+Routing notation: Routing takes binary op: & a pair or indices and writes to a write ind. Perform sequentially
+
+### Example: Bitwise addition
+0123456
+1001+11
+1100---
+
+Routing:
+**3 & 6 = 3**
+
+3 & 2 = 2
+2 & 5 = 2
+
+2 & 1 = 1
+1 & 
+
+1 & 0 = 0
+
+
+The goal is to figure out routing rules using a few simple examples.
+
+Preprocessing stage: Figure out rules to make initial numbers: 3, 6
+Remaining numbers can be calculated using a set of static numbers : 3, 6, 1, -1, 0
+
+Make an algorithm with access to the input seq and static numbers, resulting in a list of binary ops.
+At each step, the algorithm has a pair of int pointers and has access to static numbers and the numbers pulled by indexes in current and temp tape
+The 2 pointers can write to a temp tape at the spots
+
+Options at each step: take both as string, pass, write to mem.
 
 
 # Optimizer
