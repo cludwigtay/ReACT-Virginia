@@ -62,6 +62,45 @@ The 2 pointers can write to a temp tape at the spots
 
 Options at each step: take both as string, pass, write to mem.
 
+# V3 Draft
+Many components to merge the benefits of multiple model types.
+
+ReACT:
+
+input -> Conduit  -c-             input -> Conduit  -c-
+                  + -> SATrans -> 
+input -> ARes     -d-             input -> ARes     -d-
+
+Shared weights, recurrent unit.
+Decoder blocks are standard decoder attention units
+
+## UNIT Block 3
+  Universal transformer block.
+                                        3 Conv
+  input -> Norm -> Gated linear unit -> Norm -> 11 sep conv -> relu            -> Norm -> 11 sep conv -> self attention -> Norm -> Lin -> Relu -> lin
+                                        Counting Transformer -> relu 
+        -----------------------------+ -----------------------------------------+              -------------------------+ -------------------------+
+## Conduit 4
+  c runs continuously through network
+  input -> UNIT1 -> LSTM1 I -> LSTM1 O -> lin -> UNIT2 -> LSTM2 I -> LSTM2 O -> lin
+             -------------------------------+          -----------------------------+
+  recursive unit
+
+## AResBenes 2
+  Benes block with ARes switch unit
+
+### ARes switch 1
+  (d1|d2|c -> iNalu -> B+ B0 B- gates) | s1 | s2 -> lin lin -> temp -> s'1|s'2
+   temp -> lin -> Wa, Ma, Wm, Mm
+   d1|d2|c -> iCNALU(Wa,Ma,Wm,Mm) -> d1|d2
+   
+## SATrans 5
+  d expressions, 2d head transformer. tanh() x sigmoid()
+  seq|buffer -> Norm -> downscale lin -> Norm -> self attend -> solve -> bin vec
+  
+  output = line(bin vec) + seq
+  
+
 
 # Optimizer
 Relate backprop to differentiable SATMax
