@@ -100,6 +100,16 @@ Decoder blocks are standard decoder attention units
   
   output = line(bin vec) + seq
   
+  
+## Neural Adjacency Network
+- Neural Networks traditionally transfer information through vectors
+- Attention is sort of adj mat like.
+- Transmit information in adj mat
+- One problem with adj mat info transfer is permutations of input.
+- System has to be able to do regular info graph transmission
+- System has to easily expand graph in large chunks.
+- System has to easily compress graph through subgraph selection.
+  
 
 
 # Optimizer
