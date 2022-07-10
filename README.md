@@ -110,7 +110,8 @@ Decoder blocks are standard decoder attention units
 - System has to easily expand graph in large chunks.
 - System has to easily compress graph through subgraph selection.
   
-
+# V4
+NALU to make binary conditions. SATNet to solve, make conditions for ILP. Semidefinite approx and discrete relaxation to do NP Hard solves.
 
 # Optimizer
 Relate backprop to differentiable SATMax
@@ -121,3 +122,5 @@ Relate backprop to differentiable SATMax
 110 mil param model: 155.112 min for 1xA100. 0.01873358730628398 $/A100 min. 3$ @ 2.6 hrs for BERT
 
 1 Bil param will yield acceptable results, ~80% nlp. 1410.11 min, 26.416$ @ 23.5 hrs
+
+
