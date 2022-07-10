@@ -111,7 +111,7 @@ Decoder blocks are standard decoder attention units
 - System has to easily compress graph through subgraph selection.
   
 # V4
-NALU to make binary conditions. SATNet to solve, make conditions for ILP. Semidefinite approx and discrete relaxation to do NP Hard solves.
+NALU to make binary conditions. SATNet to solve, make conditions for ILP. Semidefinite approx and discrete relaxation to do NP Hard solves. ILP int solutions correspond to int pos in sequences
 
 # Optimizer
 Relate backprop to differentiable SATMax
